@@ -1,6 +1,1 @@
-# dotfiles
-all of my dotfiles organized here
-
-|  **vim**  |
-|--------|
-| .vimrc |
+# all of my configs are organized here in this very repository!!!
