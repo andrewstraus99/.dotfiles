@@ -24,8 +24,14 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+" rust plugins
+Plugin 'dense-analysis/ale'
+Plugin 'rust-lang/rust.vim'
+
 call vundle#end()
 filetype plugin indent on
+
+colorscheme zenburn
 
 " enable folding
 set foldmethod=indent
@@ -37,6 +43,10 @@ nnoremap <space> za
 " YouCompleteMe stuff
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" Rust as-you-type autocomplete
+set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enable = 1
 
 " make python pretty
 let python_highlight_all=1
@@ -53,13 +63,6 @@ if 'VIRTUAL_ENV' in os.environ:
 	execfile(activate_this, dict(__file__=activate_this))
 EOF
 
-" choose colorscheme based on vim mode
-if has('gui_running')
-	set background=dark
-	colorscheme solarized
-else
-	colorscheme zenburn
-endif
 
 call togglebg#map("<F5>")
 
