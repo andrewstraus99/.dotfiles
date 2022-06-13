@@ -101,4 +101,5 @@ let g:ale_linters = {'rust': ['analyzer']}
 " ---------------- Keybinds ----------------
 " rebind \s to use fzf
 nnoremap <Leader>s :<C-u>Files<CR>
-
+" rebind space to jump to previous buffer
+nnoremap <leader>b :ls<cr>:b<space>
